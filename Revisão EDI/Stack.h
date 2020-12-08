@@ -35,7 +35,7 @@ int Top(Stack *S){
 void Push(Stack **S, int x){
     Stack *new = (Stack*)malloc(sizeof(Stack));
     new->info = x;
-    new->prox = *S;
+    new->next = *S;
     *S = new;
 }
 //function for the remove one element with the LIFO concept into the stack
@@ -44,7 +44,7 @@ void pop(Stack **S, int *x){
     if(!isEmpty(*S)){
         aux = *S;
         *x = (*S)->info;
-        *S = (*S)->prox;
+        *S = (*S)->next;
         free(aux);
     }
     else
