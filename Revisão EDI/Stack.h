@@ -2,6 +2,13 @@
 #include<ctype.h>
 #include<stdlib.h>
 
+/*
+    TAD of Stack 
+    a method of data acess
+    where utilize the LIFO concept
+
+*/
+
 struct stack{
     int info;
     struct stack *next;
@@ -30,13 +37,6 @@ void Push(Stack **S, int x){
     new->info = x;
     new->prox = *S;
     *S = new;
-}
-//sub function for the pop remove 
-int remove(Stack **S, int x){
-    Stack *aux = *P;
-    *P = *(P)->prox;
-    free(aux);
-    return aux->info;
 }
 //function for the remove one element with the LIFO concept into the stack
 void pop(Stack **S, int *x){
