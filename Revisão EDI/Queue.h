@@ -11,7 +11,7 @@ struct queue{
 void Init(Queue **Q){
     *Q = NULL;
 }
-
+//return if the queue is empty or no
 char QisEmpty(Queue *Q){
     return *Q == NULL;
 }
