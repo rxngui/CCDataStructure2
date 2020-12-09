@@ -14,5 +14,5 @@ void init(PriorQueue **QP){
 void Enqueue(PriorQueue **QP, int x, int p){
     PriorQueue *new = (PriorQueue*)malloc(sizeof(PriorQueue));
     new->next = NULL;
-    new->
+    
 }
